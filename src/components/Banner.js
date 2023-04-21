@@ -4,17 +4,13 @@ const Banner = () => {
     return ( 
         <div className="banner">
             <div className="banner--text">
-            <p>Trending Now</p>
-            <h1>Kevin's Famous Spicy Salsa with Tomatoes</h1>
-            <p>By Kevin  Josh</p>
-            <div className="banner--btn">
-                <button>Watch Now</button>
-                <button>Htr</button>
-            </div>
-            <div className="banner--nav">
+            <h1>Welcome Dear Home Cook</h1>
+            <p>Thank you for joining us</p>
+            
+            {/* <div className="banner--nav">
                 <button><img className="left" src={arrow} alt="lft" /></button>
                 <button><img src={arrow} alt="rgt" /></button>
-            </div>
+            </div> */}
             </div>
         </div>
     );

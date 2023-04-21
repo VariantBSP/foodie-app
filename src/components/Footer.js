@@ -16,9 +16,9 @@ const Footer = () => {
 
             <div className="socials">
                 <span>Follow Us</span>
-                <Link to="/"><img src={twitter} alt="" /></Link>
-                <Link to="/"><img src={instagram} alt="" /></Link>
-                <Link to="/"><img src={whatsapp} alt="" /></Link>
+                <a href="twitter.com"><img src={twitter} alt="" /></a>
+                <a href="instagram.com"><img src={instagram} alt="" /></a>
+                <a href="whatsapp.com"><img src={whatsapp} alt="" /></a>
             </div>
         </footer>
     );

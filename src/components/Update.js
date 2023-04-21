@@ -7,7 +7,6 @@ const Update = () => {
     const { id } = useParams()
     const [formData, setFormData] = useState()
     const history = useHistory()
-
     
     useEffect(() => {
         axios.get(`http://localhost:8000/recipes/${id}`)
@@ -28,14 +27,12 @@ const Update = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        let tmp = formData.steps.split("\n")
-        console.log(tmp)
-        axios.patch(`http://localhost:8000/recipes/${id}`, {...formData, steps:tmp})
+        axios.patch(`http://localhost:8000/recipes/${id}`, formData)
         .then(res => {
             console.log(res)
             history.push('/')
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log(err)) 
         }
 
     return (
@@ -50,6 +47,8 @@ const Update = () => {
             <input type="text" name="imageURL" value={formData.imageURL} onChange={handleChange}/>
             <label htmlFor="steps">Steps</label>
             <textarea name="steps" id="message" value={formData.steps} cols="30" rows="4" onChange={handleChange}></textarea>
+            <label htmlFor="category">Category</label>
+            <input type="text" name="category" value={formData.category} onChange={handleChange} />
             <label htmlFor="author">Author Name</label>
             <input type="text" name="author" value={formData.author} onChange={handleChange} />
             <button onClick={handleSubmit}>Submit</button>

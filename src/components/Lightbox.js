@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const LightBox = styled.div`
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     text-align: center;
@@ -10,6 +11,7 @@ const LightBox = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
+    overflow: auto;
         
     h1{
         font-size: 1.9em;

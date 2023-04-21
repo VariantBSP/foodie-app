@@ -6,8 +6,10 @@ const Stars = ({id, starRating}) => {
     const [hover, setHover] = useState(0)
 
     const handleClick = (id, index) => {
-        setRating(index)
-        axios.patch(`http://localhost:8000/recipes/${id}`, {star: rating})
+        setRating(index);
+
+
+        axios.patch(`http://localhost:8000/recipes/${id}`, {stars: index})
         .then(res => {
             console.log(res)
         })
