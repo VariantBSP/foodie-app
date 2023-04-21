@@ -10,6 +10,7 @@
 
 input, textarea{
   background-color: #fcf1e6;
+  white-space: pre-line;
 }
 
 a{
@@ -163,6 +164,10 @@ img.left{
   border: none;
 }
 
+.container aside img{
+  display: none;
+}
+
 .container aside ul{
   list-style: none;
   color: #1b1b1b;
@@ -179,10 +184,6 @@ img.left{
   align-items: center;
 }
 
-#cb1{
-  accent-color: #e58a2f;
-}
-
 .catalogue{
   width: 100%;
 }
@@ -195,7 +196,7 @@ img.left{
 }
 
 .catalogue input{
-  width: 60%;
+  width: 100%;
   color: #e58a2f;
   border: none;
   padding: 10px 20px;
@@ -429,9 +430,32 @@ footer .links > a:hover{
 
     .catalogue input{
       width: 100%;
+      margin-left: 70px;
     }
     
     .container aside{
+      position: absolute;
+      width: auto;
+    }
+    .container aside h2{
       display: none;
+    }
+    .container aside b{
+      display: none;
+    }
+    .container aside ul{
+      background-color: #fcf1e6;
+      border-radius: 5px;
+      padding: 0px 10px;
+      width: 160px;
+      border: none;
+    }
+    .container aside img{
+      display: block;
+      border-radius: 10px;
+      background-color: #fcf1e6;
+      padding: 1px;
+      width: 35px;
+      height: 37px;
     }
 }
