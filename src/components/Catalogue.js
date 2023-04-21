@@ -14,12 +14,12 @@ const Catalogue = () => {
     const [checked, setChecked] = useState()
 
     const api = axios.create({
-        baseURL: "http://localhost:8000/recipes"
+        baseURL: "https://api.jsonbin.io/v3/b/6442126aebd26539d0af97af"
     })
 
     const getRecipes = () => {
         api.get("/").then(res => {
-            setRecipes(res.data)
+            setRecipes(res.data.record)
         })
     }
 
