@@ -14,7 +14,7 @@ const Catalogue = () => {
     const [checked, setChecked] = useState()
 
     const api = axios.create({
-        baseURL: "https://api.jsonbin.io/v3/b/6442126aebd26539d0af97af"
+        baseURL: "https://jsonkeeper.com/b/8CCK"
     })
 
     const getRecipes = () => {
